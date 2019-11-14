@@ -11,7 +11,9 @@ from time import sleep
 import os
 
 #definition d'une fonction qui enleve tout le texte du terminal
-def clear(): return os.system('cls')
+def clear():
+    ''' '''
+     return os.system('cls')
 #clear()
 
 #definition d'une fonction qui change une chaine de caractere en liste.
@@ -61,17 +63,14 @@ while vie != 0:
     bool = True
     while bool:
         bool = False
-        # regarde si la liste des lettre n'est pas vide et si vrai ne continue pas
-        #if len(lettre_utilisé) == 0:
-        #    break
-        
-        print('emlrkgjh')
         print("vie restante: {0}".format(vie))
         print("lettre utilisé: {0}".format(" , ".join(lettre_utilisé)))
         print("mot caché : {0}".format("".join(mot_caché)))
         lettre = input("entrer lettre a chercher : ")
         lettre = lettre.lower()
+
         clear()
+
         if len(lettre_utilisé) != 0: #regarde si la longeur de lettre n'est pas égal a zero et si 
             for i in range(len(lettre_utilisé)):
             # demande de choisir une autre lettre si la lettre est deja utilisé
