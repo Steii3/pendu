@@ -6,18 +6,21 @@
 
 
 
+
 from random import randint
 from time import sleep 
 import os
 
 #definition d'une fonction qui enleve tout le texte du terminal
 def clear():
-    ''' '''
-     return os.system('cls')
+    '''clear console'''
+    return os.system('cls')
 #clear()
 
 #definition d'une fonction qui change une chaine de caractere en liste.
-def split(word): return [char for char in word]
+def split(word):
+    '''list to string'''
+    return [char for char in word]
 #split()
 
 
