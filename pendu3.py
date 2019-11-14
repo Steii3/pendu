@@ -58,13 +58,12 @@ mot_caché = split(mot_caché)
 
 
 
-
-
 #boucle principale jeu
 while vie != 0:
     bool = True
     while bool:
         bool = False
+        
         print("vie restante: {0}".format(vie))
         print("lettre utilisé: {0}".format(" , ".join(lettre_utilisé)))
         print("mot caché : {0}".format("".join(mot_caché)))
@@ -106,14 +105,15 @@ while vie != 0:
         if mot_caché[i] == "_":
             bool = False
     if bool == True:  # si toutes lettre de mot_caché sont découvert alors fait gagné
-        pass
+        clear()
+        input("bien joué tu as gagné\nle mot était {0}".format(("".join(mot))))
+        exit()
         
 
-# if gagné == True:
-#     clear()
-#     input("bien joué tu as gagné\nle mot était {0}".format(("".join(mot))))
+
+     
     
-# else:
-#     clear()
-#     print("vous avez perdu\nle mot était {0}".format(("".join(mot))))
+#si vie = 0 met message de perdant
+clear()
+print("vous avez perdu\nle mot était {0}".format(("".join(mot))))
 
