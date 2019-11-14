@@ -1,13 +1,5 @@
 
 
-
-# a faire :
-#
-#   faire un pendu en ascii et le montrer
-#   mettre en place une liste de mot aléatoire externe de ~500 mots
-
-
-
 from random import randint
 import os 
 
