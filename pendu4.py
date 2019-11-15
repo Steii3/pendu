@@ -3,7 +3,6 @@
 #   ecran de titre
 #   
 #   faire un pendu en ascii et le montrer
-#~boucle anti-jo taper1/2
 
 
 from random import randint
@@ -35,23 +34,29 @@ vie = 10
 clear()
 
 #choix entre mot tapé par utilisateur et mot aléatoire
+while bool:
+    try: #empeche l'utilisateur de mettre autre chose que un nombre
+        i = int(input("voulez vous entrer le mot vous même , ou utiliser un mot aleatoire ?\nTaper 1 ou 2\n(1) entrer mot\n(2) utiliser liste.\n"))
+    except ValueError:
+        print("la valeur saisie n'est pas valide, entrez un nombre")
+        clear()
+        continue
+    
 
-i = int(input("voulez vous entrer le mot vous même , ou utiliser un mot aleatoire ?\nTaper 1 ou 2\n(1) entrer mot\n(2) utiliser liste.\n"))
-
-
-
-#boucle contre les utilisateur stupide
-#choix entre mot tapé par utilisateur et mot aléatoire
-if i == 1:
-    mot = input("entrer le mot : ")
-    mot = mot.lower()
-elif i == 2:
-    # choisit un mot aleatoire de la liste 'mot_liste'
-    mot = mot_liste[randint(0, len(mot_liste)-1)]
-else:
-    print("la valeur saisie n'est pas valide, entrer 1 ou 2")
-    exit()
-
+    
+    #choix entre mot tapé par utilisateur et mot aléatoire
+    if i == 1:
+        mot = input("entrer le mot : ")
+        mot = mot.lower()
+        bool = False
+    elif i == 2:
+        # choisit un mot aleatoire de la liste 'mot_liste'
+        mot = mot_liste[randint(0, len(mot_liste)-1)]
+        bool = False
+    else:
+        #empeche l'utilisateur de mettre autre chose que 1 ou 2
+        print("la valeur saisie n'est pas valide, entrer soit 1 soit 2")
+        
         
 #met le nombre de "_" correspondant au lettres du mot dans mot_caché
 for n in range(len(mot)):
@@ -83,7 +88,7 @@ while vie != 0:
             # demande de choisir une autre lettre si la lettre est deja utilisé
                 if lettre == lettre_utilisé[i] or len(lettre) > 1:
                     
-                    print("la lettre est déja utilisé ou fait plus d'un caractère, recommencer")
+                    print("la lettre est déja utilisé ou la saisie fait plus d'un caractère, recommencer")
                     bool = True
                     break
         elif len(lettre) > 1:         
