@@ -49,7 +49,7 @@ def ascii_switch(vie):
  //||
 ====================''',
         8: '''  
-  ,==========Y===
+  ,===========Y===
    ||       
    ||      
    ||      
@@ -60,7 +60,7 @@ def ascii_switch(vie):
  //||
 ====================''',
         7: '''
-  ,==========Y===
+  ,===========Y===
    ||  /     
    || /     
    ||/      
@@ -71,7 +71,7 @@ def ascii_switch(vie):
  //||
 ====================''',
         6: '''  
-  ,==========Y===
+  ,===========Y===
    ||  /      |
    || /       |
    ||/        
@@ -82,7 +82,7 @@ def ascii_switch(vie):
  //||
 ====================''',
         5: '''
-  ,==========Y===
+  ,===========Y===
    ||  /      |
    || /       |
    ||/        O
@@ -93,7 +93,7 @@ def ascii_switch(vie):
  //||
 ====================''',
         4: '''  
-  ,==========Y===
+  ,===========Y===
    ||  /      |
    || /       |
    ||/        O
@@ -104,7 +104,7 @@ def ascii_switch(vie):
  //||
 ====================''',
         3: '''  
-  ,==========Y===
+  ,===========Y===
    ||  /      |
    || /       |
    ||/        O
@@ -115,7 +115,7 @@ def ascii_switch(vie):
  //||
 ====================''',
         2: '''  
-  ,==========Y===
+  ,===========Y===
    ||  /      |
    || /       |
    ||/        O
@@ -126,7 +126,7 @@ def ascii_switch(vie):
  //||
 ==================== ''',
         1: '''  
-  ,==========Y===
+  ,===========Y===
    ||  /      |
    || /       |
    ||/        O
@@ -137,7 +137,7 @@ def ascii_switch(vie):
  //||
 ====================''',
         0: '''  
-  ,==========Y===
+  ,===========Y===
    ||  /      |
    || /       |
    ||/        O
@@ -165,7 +165,7 @@ bool = True
 clear()
 
 #choix entre mot tapé par utilisateur et mot aléatoire
-while True:
+while bool:
     try: #empeche l'utilisateur de mettre autre chose que un nombre
         i = int(input("voulez vous entrer le mot vous même , ou utiliser un mot aleatoire ?\nTaper 1 ou 2\n(1) entrer mot\n(2) utiliser liste.\n"))
     except ValueError:
