@@ -57,7 +57,7 @@ mot_caché = split(mot_caché)
 
 
 
-
+clear()
 #boucle principale jeu
 while vie != 0:
     bool = True
