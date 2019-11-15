@@ -22,7 +22,7 @@ def split(word):
     '''list to string'''
     return [char for char in word]
 #split()
-
+#fonction d'affichage des graphisme ascii
 def ascii_switch(vie):
     switcher = {
         10: '''
