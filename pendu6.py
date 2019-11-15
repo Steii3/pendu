@@ -26,7 +26,7 @@ def split(word):
 def ascii_switch(vie):
     switcher = {
         10: '''
-        
+
 
 
 
@@ -165,13 +165,12 @@ bool = True
 clear()
 
 #choix entre mot tapé par utilisateur et mot aléatoire
-while bool:
+while True:
     try: #empeche l'utilisateur de mettre autre chose que un nombre
         i = int(input("voulez vous entrer le mot vous même , ou utiliser un mot aleatoire ?\nTaper 1 ou 2\n(1) entrer mot\n(2) utiliser liste.\n"))
     except ValueError:
         clear()
         print(Fore.RED + "la valeur saisie n'est pas valide, entrez un nombre")
-        
         continue
     
 
@@ -216,9 +215,9 @@ while vie != 0:
 
         clear()
 
-        if len(lettre_utilisé) != 0: #regarde si la longeur de lettre n'est pas égal a zero et si 
+        if len(lettre_utilisé) != 0: #regarde si la longeur de lettre n'est pas égal a zero et si oui passer la recherche de lettre utilisé
             for i in range(len(lettre_utilisé)):
-            # demande de choisir une autre lettre si la lettre est deja utilisé
+            # demande de choisir une autre lettre si la lettre est deja utilisé ou si elle fait + d'ub caractere
                 if lettre == lettre_utilisé[i] or len(lettre) > 1:
                     
                     print(Fore.RED + "la lettre est déja utilisé ou la saisie fait plus d'un caractère, recommencer")
