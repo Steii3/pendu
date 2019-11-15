@@ -30,7 +30,8 @@ lettre = ""
 lettre_utilisé = []
 mot_caché = ""
 vie = 10
-bool = True
+
+
 
 clear()
 
