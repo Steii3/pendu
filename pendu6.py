@@ -4,10 +4,12 @@
 #   
 #   faire un pendu en ascii et le montrer
 
-
+from colorama import init, Fore
 from random import randint
 from time import sleep 
 import os
+
+init(autoreset=True)
 
 #definition d'une fonction qui enleve tout le texte du terminal
 def clear():
@@ -167,7 +169,7 @@ while bool:
         i = int(input("voulez vous entrer le mot vous même , ou utiliser un mot aleatoire ?\nTaper 1 ou 2\n(1) entrer mot\n(2) utiliser liste.\n"))
     except ValueError:
         clear()
-        print("la valeur saisie n'est pas valide, entrez un nombre")
+        print(Fore.RED + "la valeur saisie n'est pas valide, entrez un nombre")
         
         continue
     
@@ -185,7 +187,7 @@ while bool:
     else:
         #empeche l'utilisateur de mettre autre chose que 1 ou 2
         clear()
-        print("la valeur saisie n'est pas valide, entrer soit 1 soit 2")
+        print(Fore.RED + "la valeur saisie n'est pas valide, entrer soit 1 soit 2")
     
         
 #met le nombre de "_" correspondant au lettres du mot dans mot_caché
@@ -218,12 +220,12 @@ while vie != 0:
             # demande de choisir une autre lettre si la lettre est deja utilisé
                 if lettre == lettre_utilisé[i] or len(lettre) > 1:
                     
-                    print("la lettre est déja utilisé ou la saisie fait plus d'un caractère, recommencer")
+                    print(Fore.RED + "la lettre est déja utilisé ou la saisie fait plus d'un caractère, recommencer")
                     bool = True
                     break
         elif len(lettre) > 1:         
             bool = True
-            print("la lettre fait plus d'un caractere, réessayer")            
+            print(Fore.RED + "la lettre fait plus d'un caractere, réessayer")            
 
             
     #chercher si lettre est dans le mot
