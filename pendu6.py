@@ -26,6 +26,7 @@ def split(word):
 def ascii_switch(vie):
     switcher = {
         10: '''
+        
 
 
 
@@ -256,5 +257,5 @@ while vie != 0:
 #si vie = 0 met message de perdant
 clear()
 print(ascii_switch(vie))
-print("vous avez perdu\nle mot était {0}".format(("".join(mot))))
+print(Fore.RED + "vous avez perdu\nle mot était {0}".format(("".join(mot))))
 
